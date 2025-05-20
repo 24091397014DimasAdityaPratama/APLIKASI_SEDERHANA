@@ -19,6 +19,19 @@
 <body>
 
 <?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "crud_barang";
+
+$conn = mysqli_connect($host, $user, $pass, $db);
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+?>
+
+
+<?php
 include 'config/db.php';
 $data = mysqli_query($conn, "SELECT * FROM crud_barang");
 ?>
